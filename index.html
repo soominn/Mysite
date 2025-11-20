@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./images/img.ico" type="images/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/133260cff9.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
     <title>Soomin&#39;s website</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
         </div>
         <nav class="header__nav">
             <ul class="header__menu">
-                <li><a href="#home" class="header__menu__item active">홈으로</a></li>
+                <li><a href="#home" class="header__menu__item active" id="">홈으로</a></li>
                 <li><a href="#about" class="header__menu__item">Soomin</a></li>
                 <li><a href="#skills" class="header__menu__item">기술</a></li>
                 <li><a href="#work" class="header__menu__item">포트폴리오</a></li>
@@ -27,6 +28,7 @@
                 <li><a href="#contact" class="header__menu__item">연락처</a></li>
             </ul>
         </nav>
+        <button class="header__toggle"><i class="fa-solid fa-bars"></i></button>
     </header>
     <!-- main -->
     <main>
@@ -43,7 +45,7 @@
             <h2 class="title">조수민</h2>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed numquam, natus accusantium quis cupiditate quas deleniti, laborum consequatur fugit laudantium optio ab modi asperiores ad odio inventore quisquam recusandae nobis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium architecto esse eaque aliquid, quas nostrum ullam sed laborum numquam veniam quo dolorum non voluptatibus autem eum cumque fugiat repudiandae et.</p>
             <ul class="majors">
-                <li  class="major">
+                <li class="major">
                     <p><i class="fa-brands fa-html5 major__icon"></i></p>
                     <p class="major__title">Front-end</p>
                     <p>HTML, CSS, JavaScript, React</p>
@@ -138,13 +140,13 @@
                 <h2 class="title">포트폴리오</h2>
                 <p class="description">Projects</p>
                 <ul class="categories">
-                    <li><button class="category category--selected">ALL <span class="category__count">10</span></button></li>
-                    <li><button class="category">Front-end <span class="category__count">3</span></button></li>
-                    <li><button class="category">Mobile <span class="category__count">5</span></button></li>
-                    <li><button class="category">Back-end <span class="category__count">2</span></button></li>
+                    <li><button class="category category--all category--selected">ALL <span class="category__count" id="category__count__all">10</span></button></li>
+                    <li><button class="category category--frontend">Front-end <span class="category__count" id="category__count__frontend">3</span></button></li>
+                    <li><button class="category category--mobile">Mobile <span class="category__count" id="category__count__mobile">5</span></button></li>
+                    <li><button class="category category--backend">Back-end <span class="category__count" id="category__count__backend">2</span></button></li>
                 </ul>
                 <ul class="projects">
-                    <li class="project">
+                    <li class="project project--frontend">
                         <a href="#" target="_blank">
                             <img class="project__img" src="images/portfolio.jfif" alt="포트폴리오">
                             <div class="project__metadata">
@@ -153,7 +155,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="project">
+                    <li class="project project--frontend">
                         <a href="#" target="_blank">
                             <img class="project__img" src="images/portfolio.jfif" alt="포트폴리오">
                             <div class="project__metadata">
@@ -162,7 +164,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="project">
+                    <li class="project project--frontend">
                         <a href="#" target="_blank">
                             <img class="project__img" src="images/portfolio.jfif" alt="포트폴리오">
                             <div class="project__metadata">
@@ -171,7 +173,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="project">
+                    <li class="project project--mobile">
                         <a href="#" target="_blank">
                             <img class="project__img" src="images/portfolio.jfif" alt="포트폴리오">
                             <div class="project__metadata">
@@ -180,7 +182,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="project">
+                    <li class="project project--mobile">
                         <a href="#" target="_blank">
                             <img class="project__img" src="images/portfolio.jfif" alt="포트폴리오">
                             <div class="project__metadata">
@@ -189,7 +191,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="project">
+                    <li class="project project--mobile">
                         <a href="#" target="_blank">
                             <img class="project__img" src="images/portfolio.jfif" alt="포트폴리오">
                             <div class="project__metadata">
@@ -198,7 +200,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="project">
+                    <li class="project project--mobile">
                         <a href="#" target="_blank">
                             <img class="project__img" src="images/portfolio.jfif" alt="포트폴리오">
                             <div class="project__metadata">
@@ -207,7 +209,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="project">
+                    <li class="project project--mobile">
                         <a href="#" target="_blank">
                             <img class="project__img" src="images/portfolio.jfif" alt="포트폴리오">
                             <div class="project__metadata">
@@ -216,7 +218,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="project">
+                    <li class="project project--backend">
                         <a href="#" target="_blank">
                             <img class="project__img" src="images/portfolio.jfif" alt="포트폴리오">
                             <div class="project__metadata">
@@ -225,7 +227,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="project">
+                    <li class="project project--backend">
                         <a href="#" target="_blank">
                             <img class="project__img" src="images/portfolio.jfif" alt="포트폴리오">
                             <div class="project__metadata">
@@ -276,5 +278,19 @@
             <p>&copy; Soomin - All rights reserved</p>
         </div>
     </footer>
+
+    <!-- theme -->
+    <button class="theme__toggle">🌙</button>
+
+    <!-- modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="project-modal__overlay"></div>
+        <div class="project-modal__content">
+            <button class="project-modal__close">&times;</button>
+            <img class="project-modal__img" src="" alt="">
+            <h3 class="project-modal__title"></h3>
+            <p class="project-modal__desc"></p>
+        </div>
+    </div>
 </body>
 </html>
