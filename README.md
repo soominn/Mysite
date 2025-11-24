@@ -1,4 +1,4 @@
-# 📌 README.md — Soomin’s Website
+# 📌 Soomin’s Website
 
 이 프로젝트는 개인 포트폴리오 웹사이트로,
 HTML/CSS 기반의 정적 페이지에서 시작하여
